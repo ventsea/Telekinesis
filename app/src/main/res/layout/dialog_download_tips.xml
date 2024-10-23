@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_compat_dialog">
+
+    <TextView
+        android:id="@+id/dialog_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/download"
+        app:layout_constraintBottom_toTopOf="@+id/line"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#D4D4D4"
+        app:layout_constraintBottom_toTopOf="@+id/dialog_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_tips" />
+
+    <TextView
+        android:id="@+id/dialog_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="32dp"
+        android:ellipsize="middle"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="@string/ask_down"
+        app:layout_constraintBottom_toTopOf="@id/dialog_cancel"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line" />
+
+
+    <Button
+        android:id="@+id/dialog_cancel"
+        android:layout_width="98dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/bg_button_gray"
+        android:text="@string/cancel"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/dialog_positive"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_content" />
+
+    <Button
+        android:id="@+id/dialog_positive"
+        android:layout_width="98dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/bg_button_accent"
+        android:text="@string/positive"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/dialog_cancel"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dialog_cancel" />
+
+</android.support.constraint.ConstraintLayout>

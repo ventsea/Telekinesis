@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".test.TestActivity">
+
+    <!--ConstraintLayout 主要属性-->
+    <!--主要新增8种常规约束 Left_toLeftOf Left_toRightOf 等等-->
+
+    <!--app:layout_constraintDimensionRatio="H,16:9" 可以指定宽高比，类似的还有-->
+    <!--app:layout_constraintDimensionRatio="W,16:9" 一般都是搭配 layout_width="0dp layout_height="0dp" 使用-->
+
+    <!--app:layout_constraintHorizontal_weight 类似LinearLayout 的 weight, 需要建立Chains 才生效 并且需要在Chain head设置-->
+    <!--app:layout_constraintVertical_chainStyle 取值 spread(默认)|packed|spread_inside-->
+
+    <!--app:layout_constraintHorizontal_bias="0.9" 水平拉力 可以通过该属性定位到任意位置，相应的有垂直拉力-->
+
+    <!--android.support.constraint.Guideline 辅助线控件 配合orientation 方向属性-->
+    <Button
+        android:id="@+id/test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TEST"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
